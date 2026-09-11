@@ -144,7 +144,7 @@ const main = document.getElementById('main');
       <div class="tile" data-num="${e.num}">
         <div class="img-wrap">
           <span class="num-badge">#${String(e.num).padStart(3,'0')}</span>
-          <img src="${BASE}thumbs/${String(e.num).padStart(3,'0')}.webp"
+          <img src="${e.img}"
                alt="#${e.num} ${e.name}"
                loading="lazy" decoding="async"
                onerror="this.onerror=null;this.src='${e.img}'">
@@ -176,7 +176,7 @@ function renderLb() {
   const promptCn = `风格名称：#${String(e.num).padStart(3,'0')} · ${e.name}。\n${e.traits}`;
   lbPanel.innerHTML = `
     <div class="lb-img">
-      <img src="${BASE}full/${String(e.num).padStart(3,'0')}.webp"
+      <img src="${e.img}"
            alt="#${e.num} ${e.name}"
            onerror="this.onerror=null;this.src='${e.img}'">
     </div>
